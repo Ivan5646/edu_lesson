@@ -22,20 +22,21 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 	// ajax send form
-	$(".ajax_form").on('submit', function (e){
-		var formData = $(".ajax_form").serialize();
-		e.preventDefault();
+	/*$(".ajax_form").on('submit', function (){
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: "../mail_ajax.php",
 			dataType:'json',
-			data: formData
+			data: $(this).serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			$(this).find("input").val("");
+			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+			$(".ajax_form").trigger("reset");
 		});
-	});
+		return false;
+	});*/
 
-	/*$(".ajax_form").submit(function() {
+	$(".ajax_form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail_ajax.php",
@@ -46,7 +47,7 @@ $(document).ready(function() {
 			$(".ajax_form").trigger("reset");
 		});
 		return false;
-	});*/
+	});
 
 });
 

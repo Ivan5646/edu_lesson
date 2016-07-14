@@ -1,16 +1,13 @@
 <?php 
-    header("Content-Type: application/json", true);
     error_reporting(-1);
     ini_set('display_errors', 'On');
     set_error_handler("var_dump");
 
-    json_encode($_GET['uname']);
-
     $to = "mike000027@yandex.ru"; // this is your Email address
-    $name = $_GET['uname'];  
-    $phone = $_GET['phone'];
-    $city = $_GET['city'];
-    $email = $_GET['email'];
+    $name = $_POST['uname'];  
+    $phone = $_POST['phone'];
+    $city = $_POST['city'];
+    $email = $_POST['email'];
     $subject = "Name:" . $name  . " , City:" . $city . " , Phone:" . $phone;
     $message = "message";
 

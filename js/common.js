@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+	$(".popup").magnificPopup({type:'image'});
+
+	$.stellar({
+		responsive: true,
+		horizontalOffset: 50
+	});
+
+	$(".carousel").owlCarousel({
+		loop: true,
+		responsive: {
+			0: {
+			items:1,
+			nav:true
+			}
+		},
+		navText: ""
+	});
+
 	function wResize(){
 		$("header").css("min-height", $(window).height()); // sets header's height to current window's height
 	};
@@ -19,6 +37,12 @@ $(document).ready(function() {
 		$(".tabs_header .tab_item").not(":first").hide();
 		$(".tabs_header .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".tabs_header .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	$(".s_contacts .contacts-top .tabs .tab").click(function(){
+		$(".s_contacts .contacts-top .wrapper .tab_content .tab_item").not(":first").hide();
+		$(".s_contacts .contacts-top .tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".s_contacts .contacts-top .wrapper .tab_content .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	// ajax send form

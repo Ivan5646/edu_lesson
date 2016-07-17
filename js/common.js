@@ -40,9 +40,16 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 	$(".s_contacts .contacts-top .tabs .tab").click(function(){
-		$(".s_contacts .contacts-top .wrapper .tab_content .tab_item").not(":first").hide();
+		$(".s_contacts .tab_item").not(":first").hide();
 		$(".s_contacts .contacts-top .tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
-		$(".s_contacts .contacts-top .wrapper .tab_content .tab_item").hide().eq($(this).index()).fadeIn()
+		$(".s_contacts .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	$(".bottom_phone .wrapper .tab").click(function(){
+		$(".bottom_phone .tab_item").not(":first").hide();
+		$(".bottom_phone .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+		//console.log($(this).index());
+		$(".bottom_phone .tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	// ajax send form

@@ -25,7 +25,7 @@ body
 	line-height: 1.6
 	-webkit-font-smoothing: antialised
 
-section
+section, footer
 	padding: 58px 0 68px
 	&.s_dark
 		h2, h3, p
@@ -382,7 +382,7 @@ form
     display: inline-block
     margin: auto  
 
-.s_contacts
+/*.s_contacts
   .contacts_top
   text-align: center
   h2
@@ -400,11 +400,91 @@ form
     .tab 
       float: left
       padding: 0 60px
+      border: $color-red 5px solid
+      line-height: 38px
+      color: $color-red
       &:first-child
         border-radius: 3px 0 0 3px
       &:last-child
         border-radius: 0 3px 3px 0
+      &.active
+        background-color: $color-red
+        color: #fff
+  .tab_content
+    color: #000 */
+
+.s_contacts
+  padding-bottom: 0
+  text-align: center
+  .wrapper
+    margin-top: 15pxa
+    font-size: 18px
+    .tab_content
+      color: #000
+      text-transform: none
+  h2
+    color: #000
+    display: inline-block
+    vertical-align: middle
+    margin-bottom: 0
+    height: 45px
+    line-height: 45px
+  .tabs
+    display: inline-block
+    vertical-align: middle
+    height: 45px
+    line-height: 45px
+    margin-left: 20px
+    .tab
+      float: left
+      padding: 0 60px
+      border: #9b1818 5px solid
+      line-height: 38px
+      color: #9b1818
+      &:first-child
+        border-radius: 3px 0 0 3px
+      &:last-child
+        border-radius: 0 3px 3px 0
+      &.active
+        background-color: #9b1818
+        color: #fff
+
+.map 
+  margin-top: 20px
+  min-height: 480px
+  background-color: #e1d6b0
+
+footer
+  .button_wrap
+    text-align: center
+    margin-top: 30px
+  h2
+    color: #000
+  p
+    font-size: 18px
+    text-align: center
+    margin-top: 0
+  .bottom_phone
+    font-family: "RobotoBold" 
+    font-weight: bold
+    text-align: center
+    margin-top: 50px
+    color: $red-color
+    .wrapper 
+      .tab
+        text-transform: uppercase
+        cursor: pointer
+        &.active 
+          text-decoration: underline
+    text-align: center
+    margin-top: 50px
+    color: #9b1818
+  .tab_content
+    color: #9b1818
+    .tab_item
+      dispay: none
+      font-size: 35px
 
 
 
-
+    

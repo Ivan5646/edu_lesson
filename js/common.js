@@ -53,20 +53,6 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 	// ajax send form
-	/*$(".ajax_form").on('submit', function (){
-		$.ajax({
-			type: "POST",
-			url: "../mail_ajax.php",
-			dataType:'json',
-			data: $(this).serialize()
-		}).done(function() {
-			$(this).find("input").val("");
-			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-			$(".ajax_form").trigger("reset");
-		});
-		return false;
-	});*/
-
 	$(".ajax_form").submit(function() {
 		$.ajax({
 			type: "POST",
@@ -82,4 +68,14 @@ $(document).ready(function() {
 
 });
 
+
+	//animation
+$(window).load(function(){
+	$(".top_header").animated("fadeInDown", "fadeOut");
+	$(".tabs_header .wrapper").animated("flipInY", "fadeOut");
+	$(".profi_item").animated("fadeInRight", "fadeOut");
+	$(".s_profi form").animated("zoomInRight", "fadeOut");
+	$(".s_back h3").animated("fadeInUp", "fadeOut");
+	$("section h2, footer h2, .contacts_top .tabs").animated("fadeInUp", "fadeOut");
+});
 

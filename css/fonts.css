@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "RobotoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "RobotoBold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/RobotoBold/RobotoBoldd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "CleanvertisingLight";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/CleanvertisingLight/CleanvertisingLightd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/CleanvertisingLight/CleanvertisingLight.woff") format("woff"), url("../fonts/CleanvertisingLight/CleanvertisingLight.ttf") format("truetype"); }
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/RalewaySemiBold/RalewaySemiBoldd41d.html?#iefix") format("embedded-opentype"), url("../fonts/RalewaySemiBold/RalewaySemiBold.html") format("woff"), url("../fonts/RalewaySemiBold/RalewaySemiBold-2.html") format("truetype"); }
+
+/*# sourceMappingURL=fonts.css.map */

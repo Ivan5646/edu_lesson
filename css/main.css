@@ -17,21 +17,23 @@ body {
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialised;
+  overflow-x: hidden;
 }
 
 section, footer {
   padding: 58px 0 68px;
-}
-
-section.s_dark h2, section.s_dark h3, section.s_dark p, footer.s_dark h2, footer.s_dark h3, footer.s_dark p {
-  color: #fff;
+  color: #000;
 }
 
 section h2, footer h2 {
-  color: #003469;
+  color: #fff;
   font-size: 50px;
   line-height: 56px;
   margin-bottom: 50px;
+  font-family: CleanvertisingLight;
+  text-align: center;
+  margin-top: 0;
+  font-weight: normal;
 }
 
 header {
@@ -493,6 +495,7 @@ form .button_wrap {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.13);
   padding: 10px 0;
+  color: #fff;
 }
 
 .s_back .button {
@@ -500,49 +503,21 @@ form .button_wrap {
   margin: auto;
 }
 
-/*.s_contacts
-  .contacts_top
-  text-align: center
-  h2
-    color: #000
-    display: inline-block
-    vertical-align: middle
-    margin-bottom: 0
-    height: 45px
-    line-height: 45px
-  .tabs
-    display: inline-block
-    height: 45px
-    line-height: 45px
-    margin-left: 20px
-    .tab
-      float: left
-      padding: 0 60px
-      border: $color-red 5px solid
-      line-height: 38px
-      color: $color-red
-      &:first-child
-        border-radius: 3px 0 0 3px
-      &:last-child
-        border-radius: 0 3px 3px 0
-      &.active
-        background-color: $color-red
-        color: #fff
-  .tab_content
-    color: #000 */
 .s_contacts {
   padding-bottom: 0;
   text-align: center;
 }
 
 .s_contacts .wrapper {
-  margin-top: 15pxa;
+  margin-top: 15px;
   font-size: 18px;
 }
 
 .s_contacts .wrapper .tab_content {
   color: #000;
   text-transform: none;
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
 }
 
 .s_contacts h2 {
@@ -596,6 +571,7 @@ footer .button_wrap {
 
 footer h2 {
   color: #000;
+  margin-bottom: 30px;
 }
 
 footer p {

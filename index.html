@@ -63,7 +63,8 @@
 									</ul>
 								</div>
 								<div class="tab_item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac enim non tortor faucibus fringilla. Pellentesque eleifend fermentum laoreet. Cras nec mauris eleifend, dignissim ipsum consequat, venenatis neque.</div>
-								<div class="button_wrap"><a href="#" class="button btn_red">Начать обучение</a></div>
+								<!--<div class="button_wrap"><a href="#" class="button btn_red">Подобрать программу</a></div>-->
+								<div class="button_wrap"><button class="button btn_red prog_btn">Подобрать программу</button></div>
 							</div>
 						</div>
 					</div>
@@ -290,12 +291,88 @@
 					</div>
 				</div>
 				<div class="button_wrap">
-					<a href="#" class="button btn_red">Заказать звонок</a>
+					<!--<a href="#form_back" class="button btn_red popup_c">Заказать звонок</a>-->
+					<button class="button btn_red popup_c">Заказать звонок</button>
+			</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 
+	<form id="form_back">
+			<h2>Заказать звонок</h2>
+			<label>
+				<span>Ваше имя:</span>
+				<input type="text" name="uname" required/>
+			</label>
+			<label>
+				<span>Ваш телефон:</span>
+				<input type="text" name="phone" required/>
+			</label>
+			<div class="button_wrap">
+				<button class="button btn_green">Отправить заявку</button>
+			</div>
+		</form>
+
+	<div class="hidden">
+		<form id="hidden_form">
+			<h2>Связаться с нами</h2>
+			<label>
+				<span>Ваше имя:</span>
+				<input type="text" name="name" required/>
+			</label>
+			<label>
+				<span>Ваш телефон:</span>
+				<input type="text" name="phone" required/>
+			</label>
+			<label>
+				<span>Ваш город:</span>
+				<select name="city">
+					<option>Москва</option>
+					<option>Караганда</option>
+				</select>
+			</label>
+			<div class="button_wrap">
+				<button class="button btn_green">Отправить заявку</button>
+			</div>
+		</form>
+		
+		<!-- multustep modals -->
+		<form>
+			<h2>Заказать звонок</h2>
+			<label>
+				<span>Ваше имя:</span>
+				<input type="text" name="name" required/>
+			</label>
+			<label>
+				<span>Ваш телефон:</span>
+				<input type="text" name="phone" required/>
+			</label>
+			<div class="button_wrap">
+				<button class="button btn_green">Отправить заявку</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal_steps" id="modal">
+		<div class="modal_content">
+			<div class="modal_header">
+				<span class="close">x</span>
+			</div>
+			<div id="step1">
+				<p>Modal Window Here</p>
+				<button id="btnEndStep1">Next</button>
+			</div>
+			<div id="step2" class="hideMe">
+				<p>Step 2</p>
+				<button id="btnEndStep2">Next</button>
+			</div>
+			<div id="step3" class="hideMe">
+				<p>Step 3</p>
+				<button id="btnEndStep3">Ok</button>
+			</div>
+		</div>
+	</div>
 
 <script src="libs/jquery/jquery-1.11.1.min.js"></script>
 <!--<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>

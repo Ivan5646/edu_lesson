@@ -1,6 +1,31 @@
 $(document).ready(function() {
 
 	$(".popup").magnificPopup({type:'image'});
+	/*$(".popup_c").magnificPopup();*/
+	$(".popup_c").on("click", function(){
+		$("#form_back").css("display", "inline-block");
+	});
+
+	$(".prog_btn").on("click", function(){
+		$(".modal_steps").css("display", "inline-block");
+	});
+	$(".close").on("click", function(){
+			$(".modal_steps").css("display", "none");
+	});
+
+	$("#btnEndStep1").click(function () {
+		$("#step1").addClass('hideMe');
+	  $("#step2").removeClass('hideMe');
+	});
+	$("#btnEndStep2").click(function () {
+	  $("#step2").addClass('hideMe');
+	  $("#step3").removeClass('hideMe');
+	});
+	$("#btnEndStep3").click(function () {
+	  // Whatever your final validation and form submission requires
+	  $(".modal_steps").hide();
+	});
+
 
 	$.stellar({
 		responsive: true,
@@ -53,18 +78,18 @@ $(document).ready(function() {
 	}).eq(0).addClass("active");
 
 	// ajax send form
-	$(".ajax_form").submit(function() {
-		$.ajax({
-			type: "POST",
-			url: "mail_ajax.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$(this).find("input").val("");
-			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-			$(".ajax_form").trigger("reset");
+	$(".ajax_form, #form_back").submit(function() {
+			$.ajax({
+				type: "POST",
+				url: "mail_ajax.php",
+				data: $(this).serialize()
+			}).done(function() {
+				$(this).find("input").val("");
+				alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+				$(".ajax_form, #form_back").trigger("reset");
+			});
+			return false;
 		});
-		return false;
-	});
 
 });
 
@@ -79,3 +104,11 @@ $(window).load(function(){
 	$("section h2, footer h2, .contacts_top .tabs").animated("fadeInUp", "fadeOut");
 });
 
+
+// close modal if click anywhere outside of it
+var modal = document.getElementById("modal");
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}

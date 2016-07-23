@@ -23,6 +23,22 @@
 		font-size: 30px;
 		text-align: center !important;
 	}
+  .modal_content{
+    width: 400px !important; 
+    max-width: 400px !important;
+    padding: 6px;
+  }
+  .modal_content p {
+    font-size: 24px !important;
+  }
+  .modal_steps .modal_header ul.questions{
+    /*padding: 0 16px;*/
+    margin: 0 -8px;
+  }
+  .modal_steps .modal_header ul.questions li{
+    font-size: 22px; 
+    padding: 4px 4px;
+  }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

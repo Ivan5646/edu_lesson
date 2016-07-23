@@ -609,15 +609,18 @@ footer .tab_content .tab_item {
   font-size: 35px;
 }
 
-#form_back {
+#form_back, #hidden_form {
   max-width: 420px;
   margin: auto;
   position: relative;
-  display: none;
+}
+
+#form_back h2, #hidden_form h2 {
+  text-align: center;
+  font-weight: normal;
 }
 
 .modal_steps {
-  border: 3px solid green;
   width: 100%;
   height: 100%;
   display: none;
@@ -632,17 +635,110 @@ footer .tab_content .tab_item {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modal_steps .modal_header .close {
+  position: relative;
+  top: -24px;
+  right: -8px;
+}
+
+.modal_steps .modal_header ul.questions {
+  margin: 0 4%;
+}
+
+.modal_steps .modal_header li {
+  float: left;
+  list-style-type: none;
+  color: #67bc5c;
+  font-size: 24px;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 4px 30px;
+}
+
+.modal_steps .modal_header li.highlight {
+  background-color: #67bc5c;
+  color: #fff;
+}
+
 .modal_steps .modal_content {
+  font-family: "RobotoRegular", "sans-serif";
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
+  background-color: #f7f7f7;
+  border: #67bc5c 5px solid;
+  border-radius: 5px;
+  width: 700px;
+  height: 350px;
+  max-width: 800px;
+}
+
+.modal_steps .modal_content .question_text {
+  display: block;
+  margin: 14px 0 20px 0;
+}
+
+.modal_steps .modal_content #step1 input, .modal_steps .modal_content #step1 select {
+  display: block;
+  line-height: 36px;
+  height: 36px;
+  border: #dfdfdf 1px solid;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06) inset;
   width: 80%;
+  text-indent: 10px;
+  font-size: 20px;
+  margin-top: 36px;
+}
+
+.modal_steps .modal_content #step1 input:focus {
+  box-shadow: #67bc5c 0 0 0 2px;
+  border-radius: 3px;
+  border-color: #67bc5c;
+}
+
+.modal_steps .modal_content #step1 .step_btns1 {
+  margin-top: 112px;
+}
+
+.modal_steps .modal_content #step2 ul {
+  margin-top: 40px;
+}
+
+.modal_steps .modal_content #step2 ul li {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.modal_steps .modal_content #step2 ul li input[type="radio"] {
+  margin-right: 10px;
+}
+
+.modal_steps .modal_content #step2 .step_btns2 {
+  margin-top: 70px;
+}
+
+.modal_steps .modal_content .step_btns3 {
+  margin-top: 34px;
+}
+
+.modal_steps .modal_content form {
+  padding: 0;
+  border: none;
+}
+
+.modal_steps .modal_content form input {
+  line-height: 36px;
+  height: 36px;
+  width: 80%;
+  text-indent: 10px;
+  font-size: 20px;
+  margin-top: 0;
 }
 
 .modal_steps .modal_content p {
-  font-size: 50px;
-  color: pink;
+  font-size: 30px;
+  color: #000;
 }
 
 .modal_steps .modal_content .close {

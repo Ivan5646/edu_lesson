@@ -463,14 +463,15 @@ footer
       dispay: none
       font-size: 35px
 
-#form_back
+#form_back, #hidden_form
   max-width: 420px
   margin: auto
   position: relative  
-  display: none
+  h2
+    text-align: center
+    font-weight: normal
 
 .modal_steps
-  border: 3px solid green
   width: 100%
   height: 100%
   display: none
@@ -482,15 +483,82 @@ footer
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0) /* Fallback color */
   background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+  .modal_header
+    .close
+      position: relative
+      top: -24px
+      right: -8px
+    ul.questions
+      margin: 0 4%
+    li
+      float: left
+      list-style-type: none
+      color: $green-color
+      font-size: 24px
+      border-radius: 30px
+      display: inline-block
+      padding: 4px 30px
+      &.highlight
+        background-color: $green-color
+        color: #fff
   .modal_content
+    font-family: "RobotoRegular", "sans-serif"
     background-color: #fefefe
     margin: auto
     padding: 20px
     border: 1px solid #888
-    width: 80%
+    background-color: #f7f7f7
+    border: #67bc5c 5px solid
+    border-radius: 5px
+    width: 700px //60%
+    height: 350px//70%
+    max-width: 800px // to make it responsive...
+    .question_text
+      display: block
+      margin: 14px 0 20px 0
+    #step1
+      input, select
+        display: block
+        line-height: 36px
+        height: 36px
+        border: #dfdfdf 1px solid
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.06) inset
+        width: 80%
+        text-indent: 10px
+        font-size: 20px
+        margin-top: 36px
+      input:focus
+        box-shadow: #67bc5c 0 0 0 2px
+        border-radius: 3px
+        border-color: #67bc5c
+      .step_btns1
+        margin-top: 112px
+    #step2
+      ul
+        margin-top: 40px
+        li
+         list-style-type: none
+         font-size: 18px
+         input[type="radio"]
+          margin-right: 10px // is not applied, is not even displayed in styles
+      .step_btns2
+        margin-top: 70px
+    #step3
+    .step_btns3
+      margin-top: 34px
+    form
+      padding: 0
+      border: none
+      input
+        line-height: 36px
+        height: 36px
+        width: 80%
+        text-indent: 10px
+        font-size: 20px
+        margin-top: 0
     p 
-      font-size: 50px
-      color: pink
+      font-size: 30px
+      color: #000
     .close
       color: #aaaaaa
       float: right
@@ -500,6 +568,7 @@ footer
         color: #000
         text-decoration: none
         cursor: pointer
+    
 
 /*#step1
   display: block    */   
